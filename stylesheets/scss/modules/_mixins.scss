@@ -1,0 +1,72 @@
+@mixin bp($queries, $type: only screen) {
+  $query-count: length($queries);
+  $media-statement: "#{$type} and";
+  @for $i from 1 through $query-count {
+    $query: nth($queries, $i);
+    $value: '';
+    $key: '';
+    @if length($query) == 1 or nth($query, 2) == up {
+      $key: min-width;
+      $value: if(map-has-key($bp, nth($query, 1)), px-em(map-get($bp, nth($query, 1))), px-em(nth($query, 1)));
+    } @else {
+      @if nth($query, 2) == down {
+        $key: max-width;
+        $value: if(map-has-key($bp, nth($query, 1)), px-em(map-get($bp, nth($query, 1)) - 1), px-em(nth($query, 1) - 1));
+      } @else {
+        $key: nth($query, 1);
+        $value: nth($query, 2);
+      }
+    }
+    $media-statement: if($i == 1, "#{$media-statement} (#{$key}: #{$value})", "#{$media-statement}, (#{$key}: #{$value})");
+  }
+  @media #{$media-statement} {
+    @content;
+  }
+}
+
+@mixin text-hide() {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999em;
+  white-space: nowrap;
+}
+
+@mixin text-wai() {
+  display: block !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+@mixin nav-list {
+    list-style-type: none;
+    overflow: hidden;
+    > li{
+        display: inline-block;
+        &:first-child{
+            margin-left: 0px;
+        }
+    }
+}
+
+@mixin clear() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin button() {
+  cursor: pointer;
+  padding: 8px 14px 6px 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: rem(16);
+  color: #fff;
+  border: none;
+  text-align: center;
+  background: $blue;
+  &:hover { text-decoration: none; }
+}

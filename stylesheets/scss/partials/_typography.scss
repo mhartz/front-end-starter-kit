@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Frutiger';
+  src: url('../../fonts/Frutiger-Roman.eot');
+  src: url('../../fonts/Frutiger-Roman.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Frutiger-Roman.woff') format('woff'),
+       url('../../fonts/Frutiger-Roman.ttf')  format('truetype'),
+       url('../../fonts/Frutiger-Roman.svg#svgFontName') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Frutiger';
+  src: url('../../fonts/Frutiger-Black.eot');
+  src: url('../../fonts/Frutiger-Black.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Frutiger-Black.woff') format('woff'),
+       url('../../fonts/Frutiger-Black.ttf')  format('truetype'),
+       url('../../fonts/Frutiger-Black.svg#svgFontName') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $gray;
+  background: #fff;
+}
+
+.black-heading,
+.large-heading,
+.main-heading,
+.small-heading {
+  text-transform: uppercase;
+  font-family: $title-stack;
+}
+
+.black-heading {
+  font-weight: 900;
+  font-size: rem(18);
+  color: #000;
+
+  @include bp(tablet) {
+    font-size: rem(22);
+  }
+
+  @include bp(desk) {
+    font-size: rem(30);
+  }
+
+  @include bp(full) {
+    font-size: rem(47);
+  }
+}
+
+.large-heading {
+  font-size: rem(19);
+  color: $navy;
+  margin-bottom: rem(20);
+
+  @include bp(tablet) {
+    font-size: rem(36);
+  }
+}
+
+.main-heading {
+  font-size: rem(19);
+  color: $navy;
+  margin-bottom: rem(20);
+
+  @include bp(tablet) {
+    font-size: rem(30);
+  }
+}
+
+.small-heading {
+  text-transform: uppercase;
+  font-size: rem(15);
+  color: #fff;
+}
+
+.inline-learn-more {
+  font-size: rem(12);
+
+  @include bp(tablet) {
+    font-size: rem(16);
+  }
+}
+
+.opaque-bg {
+  color: #fff;
+  background: rgba(0, 34, 68, .75);
+  
+  a {
+    color: #fff;
+  }
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  font-size: rem(14);
+  line-height: rem(22);
+  margin-bottom: rem(26);
+
+  @include bp(tablet) {
+    font-size: rem(16);
+    line-height: rem(28);
+  }
+}
+
+li {
+  font-size: rem(14);
+
+  @include bp(tablet) {
+    font-size: rem(16);
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

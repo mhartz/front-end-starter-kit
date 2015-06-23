@@ -1,0 +1,10 @@
+@function px-em($px, $px-context: 16) {
+  // Make sure it's a number
+  @if(round($px)) {
+    @return #{$px / $px-context}em;
+  }
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem
+}
