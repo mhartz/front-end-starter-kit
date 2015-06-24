@@ -1,56 +1,14 @@
-@font-face {
-  font-family: 'Frutiger';
-  src: url('../../fonts/Frutiger-Roman.eot');
-  src: url('../../fonts/Frutiger-Roman.eot?#iefix') format('embedded-opentype'),
-       url('../../fonts/Frutiger-Roman.woff') format('woff'),
-       url('../../fonts/Frutiger-Roman.ttf')  format('truetype'),
-       url('../../fonts/Frutiger-Roman.svg#svgFontName') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Frutiger';
-  src: url('../../fonts/Frutiger-Black.eot');
-  src: url('../../fonts/Frutiger-Black.eot?#iefix') format('embedded-opentype'),
-       url('../../fonts/Frutiger-Black.woff') format('woff'),
-       url('../../fonts/Frutiger-Black.ttf')  format('truetype'),
-       url('../../fonts/Frutiger-Black.svg#svgFontName') format('svg');
-  font-weight: 900;
-  font-style: normal;
-}
-
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $font-stack;
   color: $gray;
   background: #fff;
 }
 
-.black-heading,
 .large-heading,
 .main-heading,
 .small-heading {
   text-transform: uppercase;
   font-family: $title-stack;
-}
-
-.black-heading {
-  font-weight: 900;
-  font-size: rem(18);
-  color: #000;
-
-  @include bp(tablet) {
-    font-size: rem(22);
-  }
-
-  @include bp(desk) {
-    font-size: rem(30);
-  }
-
-  @include bp(full) {
-    font-size: rem(47);
-  }
 }
 
 .large-heading {
@@ -77,23 +35,6 @@ body {
   text-transform: uppercase;
   font-size: rem(15);
   color: #fff;
-}
-
-.inline-learn-more {
-  font-size: rem(12);
-
-  @include bp(tablet) {
-    font-size: rem(16);
-  }
-}
-
-.opaque-bg {
-  color: #fff;
-  background: rgba(0, 34, 68, .75);
-  
-  a {
-    color: #fff;
-  }
 }
 
 a {

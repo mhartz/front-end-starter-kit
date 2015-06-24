@@ -18,7 +18,7 @@ strong {
   font-weight: bold;
 }
 
-.video-wrapper {
+.frame-wrapper {
   position: relative;
   height: 0;
   padding-top: 25px;
@@ -47,8 +47,7 @@ strong {
   @include button();
 }
 
-.wrapper,
-.mwrapper {
+.wrapper {
   width: 100%;
   margin: 0 auto;
   @include clear();
@@ -78,95 +77,6 @@ input[type=tel] {
   border: 1px solid #adacac;
   width: 100%;
   padding: rem(7) rem(14);
-
-  @include bp(tablet) {
-    font-size: rem(16);
-  }
-}
-
-.row {
-  width: 100%;
-  padding: rem(25) 0;
-
-  @include bp(tablet) {
-    padding: rem(40);
-  }
-
-  @include bp(full) {
-    padding: rem(60);
-  }
-}
-
-.grey-bg {
-  background: #f2f2f2;
-}
-
-.large-col,
-.small-col {
-  width: 100%;
-}
-
-.box {
-  display: block;
-
-  @include bp(tablet) {
-    margin-left: 20px/1280px*100%;
-    margin-right: 20px/1280px*100%;
-    float: left;
-
-    &:first-of-type {
-      margin-left: 0;
-    }
-
-    &:last-of-type {
-      margin-right: 0;
-    }
-  }
-}
-
-.box.middle-item {
-  @include bp(tablet) {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 20px/1280px*100%;
-    padding-right: 20px/1280px*100%;
-  }
-}
-
-.large-col {
-  @include bp(tablet) {
-    width: 840px/1280px*100%;
-  }
-}
-
-.small-col {
-  @include bp(tablet) {
-    width: 400px/1280px*100%;
-  }
-}
-
-.video-placeholder {
-  display: block;
-  width: 100%;
-  position: relative;
-
-  img {
-    display: block;
-    width: 100%;
-  }
-
-  .small-heading {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: rem(12) 0;
-    text-align: center;
-  }
-}
-
-.bottom-dot {
-  border-bottom: 2px dotted #cac9c9;
 }
 
 .text-hide {
